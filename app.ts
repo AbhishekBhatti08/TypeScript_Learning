@@ -1,14 +1,15 @@
-// console.log('Your code goes here...');
 
-enum Role {ADMIN, READ_ONLY, AUTHOR, USER}
 
-const persons= {
-    name: "Abhishek",
-    age: 32,
-    hobbies: ['sports', 'cooking'],
-    role: Role.AUTHOR
+function Add ( n1:number, n2: number) {
+ return n1 + n2;
 }
 
-if (persons.role=== Role.AUTHOR) {
-    console.log("Author")
+function printResult (num: number): void {
+    console.log("Result -->" + num)
 }
+
+printResult(Add(2,4));
+
+let combineNums: (n1:number, n2:number)=>  number = Add;
+
+combineNums(3,3);
